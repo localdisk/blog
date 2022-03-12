@@ -1,5 +1,8 @@
 <?php
 
+declare(strict_types=1);
+
+use App\Http\Controllers\Admin\PostCreateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::prefix('admin')->group(function () {
+    Route::get('posts/create', PostCreateController::class);
 });
