@@ -8,10 +8,8 @@ use App\Http\Controllers\Controller;
 
 class PostCreateController extends Controller
 {
-    public function __invocke()
+    public function __invoke()
     {
-        $a = 'foo';
-
         return view('posts.create');
     }
 }
